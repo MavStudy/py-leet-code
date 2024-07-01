@@ -34,7 +34,8 @@ def separator():
 
 
 class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
+    """Класс Решение(Solution)"""
+    def longest_common_prefix(self, strs: List[str]) -> str:
         """
         Function to find the longest common prefix string amongst an array
         of strings.
@@ -73,42 +74,46 @@ def call_method():
 
     strs = ["flower", "flow", "flight"]
     print(f"Input: {strs = }")
-    result = obj.longestCommonPrefix(strs)
+    result = obj.longest_common_prefix(strs)
     print(f"Output: {result = }")
     separator()
 
     strs = ["dog", "racecar", "car"]
     print(f"Input: {strs = }")
-    result = obj.longestCommonPrefix(strs)
+    result = obj.longest_common_prefix(strs)
     print(f"Output: {result = }")
     separator()
 
     strs = ["apple"]
     print(f"Input: {strs = }")
-    result = obj.longestCommonPrefix(strs)
+    result = obj.longest_common_prefix(strs)
     print(f"Output: {result = }")
     separator()
 
     strs = [""]
     print(f"Input: {strs = }")
-    result = obj.longestCommonPrefix(strs)
+    result = obj.longest_common_prefix(strs)
     print(f"Output: {result = }")
     separator()
 
     strs = ["ab", "a"]
     print(f"Input: {strs = }")
-    result = obj.longestCommonPrefix(strs)
+    result = obj.longest_common_prefix(strs)
     print(f"Output: {result = }")
     separator()
 
     strs = ["cir", "car"]
     print(f"Input: {strs = }")
-    result = obj.longestCommonPrefix(strs)
+    result = obj.longest_common_prefix(strs)
     print(f"Output: {result = }")
     separator()
 
 
 def main():
+    """
+    Main function
+    :return:
+    """
     call_method()
 
 
