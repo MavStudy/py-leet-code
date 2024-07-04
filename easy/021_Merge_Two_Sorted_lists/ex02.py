@@ -87,6 +87,7 @@ def print_backward(ll: ListNode):  # ll - Linked List
 # print_backward, чтобы вывести 3 2 1, и отдельно вывести открывающую и
 # закрывающую скобки. Назовем новую функцию print_backward_nicely:
 
+
 def print_backward_nicely(ll: ListNode):
     """
     В любом месте программы можно вызвать функцию print_backward_nicely,
@@ -94,7 +95,7 @@ def print_backward_nicely(ll: ListNode):
     работает как обертка, используя функцию print_backward в качестве
     помощника.
 
-    :param list: первый узел связанного списка
+    :param ll: первый узел связанного списка
     :return:
     """
     print("[")

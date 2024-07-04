@@ -31,6 +31,7 @@ class LinkedList:
         print("]")
 
     def print_list(self):
+        """Печать связанного списка"""
         print("[", end="")  # начало обёртки
         last_node = self.head
         while last_node.next:
