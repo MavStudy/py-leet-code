@@ -44,10 +44,10 @@ def separator():
 # Definition for singly-listed list.
 class ListNode:
     """Класс узла"""
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next_node=None):
         """Метод инициализации"""
         self.val = val
-        self.next = next
+        self.next = next_node
 
     def __str__(self):
         """Метод отображения объектов класса"""
@@ -56,7 +56,7 @@ class ListNode:
 
 class Solution:
     """Класс решения"""
-    def mergeTwoLists(
+    def merge_two_lists(
         self,
         list1: Optional[ListNode],
         list2: Optional[ListNode]
@@ -118,7 +118,7 @@ def call_method():
     print("list2 = ", end='')
     print_list(node2_1)
     print()
-    result = obj.mergeTwoLists(node1_1, node2_1)
+    result = obj.merge_two_lists(node1_1, node2_1)
     print(OUTPUT, end='')
     print_list(result)
     print()
@@ -126,7 +126,7 @@ def call_method():
     separator()
 
     print("Input: list1 = [], list2 = []")
-    result2 = obj.mergeTwoLists(None, None)
+    result2 = obj.merge_two_lists(None, None)
     print(OUTPUT, end='')
     print_list(result2)
     print()
@@ -137,7 +137,7 @@ def call_method():
     node3_1 = ListNode(0)
     print_list(node3_1)
     print()
-    result3 = obj.mergeTwoLists(None, node3_1)
+    result3 = obj.merge_two_lists(None, node3_1)
     print(OUTPUT, end='')
     print_list(result3)
 
