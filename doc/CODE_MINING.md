@@ -90,3 +90,9 @@ ___> result-pylint.log___.
 
 [PEP 263 - Defining Python Source Code Encodings](
 https://peps.python.org/pep-0263/)
+
+
+### Полезные статьи:
+
+[Стильный код на Python, или учимся использовать Flake8](
+https://habr.com/ru/companies/dataart/articles/318776/)
