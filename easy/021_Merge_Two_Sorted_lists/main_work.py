@@ -44,10 +44,10 @@ def separator():
 # Definition for singly-listed list.
 class ListNode:
     """Класс узла"""
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next_node=None):
         """Метод инициализации"""
         self.val = val
-        self.next = next
+        self.next = next_node
 
     def __str__(self):
         """Метод отображения объектов класса"""

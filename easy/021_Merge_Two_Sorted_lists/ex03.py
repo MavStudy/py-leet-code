@@ -1,4 +1,6 @@
+# coding=utf-8
 """Изучаем связанные списки - ex03.py"""
+
 
 
 class LinkedList:
