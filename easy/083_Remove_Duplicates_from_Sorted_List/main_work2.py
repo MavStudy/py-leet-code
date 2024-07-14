@@ -50,7 +50,7 @@ class ListNode:
 
 class Solution:
     """Класс решения"""
-    def deleteDuplicates(
+    def delete_duplicates(
         self,
         head: Optional[ListNode],
     ) -> Optional[ListNode]:
@@ -76,7 +76,7 @@ class Solution:
         return head  # возврат 1-ого узла
 
 
-def check_method(head: ListNode):
+def check_method(head: [ListNode, None]):
     """
     Function for check
 
@@ -88,7 +88,7 @@ def check_method(head: ListNode):
     print_list(head)
     print()
     separator()
-    head = obj.deleteDuplicates(head)
+    head = obj.delete_duplicates(head)
     print(OUTPUT, end='')
     print_list(head)
     print()
