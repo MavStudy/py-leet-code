@@ -64,7 +64,7 @@ Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 O(m + n) времени?)
 
 """
-from typing import Optional, List
+from typing import List
 
 OUTPUT = "Output: "
 
@@ -78,30 +78,15 @@ def separator():
     print('-' * 50)
 
 
-class Queue:
-    """Реализация очереди"""
-    def __init__(self):
-        self.items = []
-
-    def isEmpty(self):
-        return self.items == []
-
-    def enqueue(self, item):
-        self.items.insert(0, item)
-
-    def dequeue(self):
-        return self.items.pop()
-
-    def peek(self):
-        return self.items[len(self.items) - 1]
-
-    def size(self):
-        return len(self.items)
-
-
 class Solution:
     """Класс решения"""
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+    def merge(
+        self,
+        nums1: List[int],
+        m: int,
+        nums2: List[int],
+        n: int
+    ) -> None:
         """
         Do not return anything, modify nums1 in-place instead. (Ничего не
         возвращайте, вместо этого измените nums1 на месте.)
@@ -112,36 +97,23 @@ class Solution:
         :param n:
         :return:
         """
-        if n == 0:
-            return
+        # last index nums1
+        last = m + n - 1
 
-        if m == 0:
-            for i in range(n):
-                nums1[i] = nums2[i]
-            return
-
-
-        j = 0
-        q = Queue()
-        for i in range(m + n):
-            if i < m:
-                if nums1[i] <= nums2[j]:
-                    continue
-
-            if q.isEmpty():
-                q.enqueue(nums1[i])
-                nums1[i] = nums2[j]
-                j += 1
-                continue
-
-            if nums1[i] > q.peek():
-                q.enqueue(nums1[i])
-                nums1[i] = q.dequeue()
-                j += 1
+        # merge in reverse order
+        while m > 0 and n > 0:
+            if nums1[m - 1] > nums2[n - 1]:
+                nums1[last] = nums1[m - 1]
+                m -= 1
             else:
-                nums1[i] = q.dequeue()
+                nums1[last] = nums2[n - 1]
+                n -= 1
+            last -= 1
 
-
+        # fill nums1 with leftover nums2 elements
+        while n > 0:
+            nums1[last] = nums2[n - 1]
+            n, last = n - 1, last - 1
 
 
 def check_method(nums1: List[int], m: int, nums2: List[int], n: int):
@@ -182,6 +154,11 @@ def main():
     n = 3
     check_method(nums1, m, nums2, n)
 
+    nums1 = [2, 5, 6, 0, 0, 0]
+    m = 3
+    nums2 = [1, 2, 3]
+    n = 3
+    check_method(nums1, m, nums2, n)
 
 
 if __name__ == '__main__':
